@@ -9,7 +9,7 @@ Here is an example of what your project could look like once you're finished. Pl
 ## Operational instructions
 To complete this challenge, start by forking this repo to your own GitHub account. Then, code your web app using your favourite environment. Once you are done, please submit your challenge as a pull request here.
 
-Apart from the general requirement of producing a web app with AJAX, you are not required to use any particular framework, nor are you required to use a framework at all. You can do everything with `XMLHttpRequest` and `innerHTML` or go crazy with a React/Redux or Angular app.
+Apart from the general requirement of producing a web app with AJAX, you are not required to use any particular framework, nor are you required to use a framework at all. You can do everything with `fetch` and `innerHTML` or go crazy with a React/Redux or AngularJS app.
 
 :warning: **NOTE:** The Twitter API does not work using AJAX because it does not allow cross-domain requests. This is why you have to setup a NodeJS proxy server that will handle making the calls to twitter.
 

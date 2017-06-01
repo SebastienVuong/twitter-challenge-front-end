@@ -8,10 +8,7 @@ class Tweets extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            created_at: [],
-            text: [],
-            url: [],
-            image: []
+            tweets: []
         };
     }
     
@@ -22,30 +19,31 @@ class Tweets extends React.Component {
     fetchData() {
         api.getTweets(this.props.account, 10)
         .then(tweets => {
-            console.log('tweets fetched')
+            // this.setState({
+            //     created_at: tweets.created_at,
+            //     text: tweets.text,
+            //     url: tweets.url,
+            //     image: tweets.image,
+            //     id: tweets.id
+            // })
             this.setState({
-                created_at: tweets.created_at,
-                text: tweets.text,
-                url: tweets.url,
-                image: tweets.image,
-                id: tweets.id
+                tweets: tweets
             })
         })
     }
     
     render() {
-        console.log('rendering')
         return (
             <div className="TweetBoard"> 
                 <h2>@{this.props.account}</h2>
                 <ul>
-                    { this.state.text.map((text,idx) => 
+                    { this.state.tweets.map(tweet => 
                         <Tweet  
-                            text={text}
-                            created_at={this.state.created_at[idx]}
-                            url={this.state.url[idx]}
-                            image={this.state.image[idx]}
-                            key={this.state.id[idx]}
+                            text={tweet.text}
+                            created_at={tweet.created_at}
+                            url={tweet.url}
+                            image={tweet.image}
+                            key={tweet.id}
                         />
                     )}
                 </ul>

@@ -19,13 +19,6 @@ class Tweets extends React.Component {
     fetchData() {
         api.getTweets(this.props.account, 10)
         .then(tweets => {
-            // this.setState({
-            //     created_at: tweets.created_at,
-            //     text: tweets.text,
-            //     url: tweets.url,
-            //     image: tweets.image,
-            //     id: tweets.id
-            // })
             this.setState({
                 tweets: tweets
             })

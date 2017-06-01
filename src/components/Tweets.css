@@ -1,0 +1,16 @@
+.TweetBoard {
+    min-width: 350px;
+    width: 25vw;
+    border-color: silver;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 7px 7px 5px 0px gray;
+}
+
+ul {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
